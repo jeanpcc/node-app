@@ -1,10 +1,6 @@
-const mongoose = require('mongoose');
-const config = require('./config/config');
+const mongoose = require('mongoose'); 
 
-const urldev = 'mongodb://'+config.dev+'/notes-db-app';
-const urlprod = 'mongodb://'+config.prod+'/notes-db-app';
-
-mongoose.connect(urldev,{
+mongoose.connect('mongodb://localhost/notes-db',{
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false
